@@ -37,11 +37,10 @@ class App extends Component {
     return (
       <div className='app'>
         <div className="lights">
-          <div className="light1" style={{ backgroundColor: status1 === true ? "red" : null }}></div>
-          <div className="light2" style={{ backgroundColor: status2 === true ? "yellow" : null }} ></div>
-          <div className="light3" style={{ backgroundColor: status3 === true ? "green" : null }}></div>
+          <div className="light1" onClick={this.changeColor} style={{ backgroundColor: status1 === true ? "red" : null }}></div>
+          <div className="light2" onClick={this.changeColor} style={{ backgroundColor: status2 === true ? "yellow" : null }} ></div>
+          <div className="light3" onClick={this.changeColor} style={{ backgroundColor: status3 === true ? "green" : null }}></div>
         </div>
-        <button onClick={this.changeColor}> Change Lights Color </button>
       </div>
     )
   }
